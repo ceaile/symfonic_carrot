@@ -1,0 +1,180 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+{% include 'header.html.twig' %}
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="zoomedImage">
+</div>
+
+<section class="container">
+    <h1 class="display-4"> {{ title }} </h1>
+    <hr>
+
+    <!-- Sección de Novedades -->
+    <div class="row catalogo">
+        <div class="col-md-6">
+            <h2>Novedades</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_1954.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla 1954</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_raids_again.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla Raids Again</h5>
+                            <p class="card-text">Gojira no gyakushu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_king_of_the_monsters.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla, King of the monsters!</h5>
+                            <p class="card-text">Kaijū Ō Gojira</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/kingkong_vs_godzilla.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">King Kong vs. Godzilla</h5>
+                            <p class="card-text">King Kong tai Gojira</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/mothra_vs_godzilla.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Mothra vs. Godzilla</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_contra_el_terror_de_los_mares.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla contra el Terror de los Mares</h5>
+                            <p class="card-text">Gojira, Ebira, Mothra Nankai no Daikettō</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/el_hijo_de_godzilla.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">El hijo de Godzilla</h5>
+                            <p class="card-text">Kaijū-tō no Kessen Gojira no Musuko</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/destroy_all_monsters.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Destroy all monsters</h5>
+                            <p class="card-text">Kaijū Sōshingeki</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzillas_revenge.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla's Revenge</h5>
+                            <p class="card-text">Gojira-Minira-Gabara: Ōru Kaijū Daishingeki</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Recomendaciones -->
+        <div class="col-md-6">
+            <h2>Recomendaciones</h2>
+            <div class="row catalogo">
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_vs_hedorah.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla vs. Hedorah</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_vs_gigan" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla vs. Gigan</h5>
+                            <p class="card-text">Chikyū Kogeki Meirei Gojira tai Gaigan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_vs_megalon" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla vs. Megalon</h5>
+                            <p class="card-text">Godzilla tai Megalon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla_vs_mechagodzilla.png" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla vs. Mechagodzilla</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/el_regreso_de_mechagodzilla.png" class="card-img-top" alt="..." />
+                        <div class="card-body">El Regreso de MecaGodzilla</h5>
+                            <p class="card-text">Mechagodzilla no Gyakushū</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card catalogo--card">
+                        <img src="assets/img/godzilla.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Godzilla</h5>
+                            <p class="card-text">1984</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include 'footer.html.twig' %}
+{% endblock %}

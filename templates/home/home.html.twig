@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+{% include 'header.html.twig' %}
+<div class="container">
+    <div class="container">
+        <!-- Titular principal de la página -->
+        <h1 class="display-4">{{ title }}</h1>
+        <hr>
+        <!-- Bloques de banners promocionales -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/day_deals.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/mando.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/merch.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/img/25_discount.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html.twig' %}
+{% endblock %}
