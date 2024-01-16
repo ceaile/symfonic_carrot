@@ -1,5 +1,24 @@
+
 body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: rgb(241, 129, 88);
     color:black;
-    border-color: green;
+    border-color: wheat;
+}
+
+.container {
+    background-image: url('tu-imagen.jpg'); /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: #fff; /* Cambia el color del texto según tus preferencias */
 }
