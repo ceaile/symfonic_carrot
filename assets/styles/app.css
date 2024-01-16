@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background-image: url('tu-imagen.jpg'); /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
+    background-image: url('assets/img/hero-bg-carrots.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
