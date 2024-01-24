@@ -1,4 +1,8 @@
 <?php
+/* 
+php bin/console cache:clear --no-warmup
+en el caso de que salte un error de cache 
+*/
 
 use App\Kernel;
 
