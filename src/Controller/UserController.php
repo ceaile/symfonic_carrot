@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserController extends AbstractController
 {
@@ -20,12 +21,23 @@ class UserController extends AbstractController
         $this->em = $em;
     }
 
-    public function registroUser(Request $request): Response
+    public function registroUser(Request $request, UserPasswordHasherInterface $passwordHasher): Response
     {
         $user = new User();
         $registration_form = $this->createForm(UserType::class, $user);
+
+        
+
         $registration_form->handleRequest($request);
         if ($registration_form->isSubmitted() && $registration_form->isValid()){
+
+            $plaintextPassword = $registration_form->get('password')->getData();
+
+            $hashedPassword = $passwordHasher->hashPassword(
+                $user,
+                $plaintextPassword
+            );
+            $user->setPassword($hashedPassword);
             $user->setRoles(['ROLE_USER']);
             $this->em->persist($user);
             $this->em->flush();
